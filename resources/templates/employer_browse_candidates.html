@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bootstrap Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            justify-content: space-between;
+            align-items: stretch;
+            height: 100vh;
+        }
+        .table-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            height: 300px;
+        }
+        h4 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table th, table td {
+            padding: 12px;
+            border: none;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-align: left;
+        }
+        .filter-select {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .navbar {
+            padding: 10px;
+            background-color: #f8f9fa;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        .assign {
+            color: blue;
+            border-radius: 10px;
+            font-size: medium;
+        }
+        .update {
+            color: yellow;
+            border-radius: 10px;
+            font-size: medium;
+        }
+        .form-container {
+            display: none;
+            margin-top: 10px;
+        }
+        .form-container.active {
+            display: block;
+        }
+        .form-container input[type="datetime-local"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .form-container button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function showForm(button,id) {
+			console.log("enter")
+			console.log(id)
+            var formContainer = document.getElementById("form"+id);
+            formContainer.classList.toggle("active");
+        }
+        function searchinterview(){
+        var candidtes=document.getElementById("tbody interview");
+        var count_tr=candidtes.childElementCount;
+        var element=document.getElementById("myinput interview")
+        var input_value=element.value;
+        if(input_value.toString()===""){
+            for(let id=0;id<count_tr+1;++id){
+            let tr_element=document.getElementById("intr"+id);
+            console.log(tr_element)
+            tr_element.hidden=false;
+            
+        }   
+        }
+        var input_text=input_value.toString();
+        for(let id=0;id<count_tr+1;++id){
+            let name_elements=document.getElementById("intremail"+id);
+            let tr_element=document.getElementById("intr"+id);
+            let name_text=name_elements.textContent;
+            if(name_text.includes(input_text)==false){
+                
+                tr_element.hidden=true;
+            }
+            
+        }
+        
+   }
+   function searchcandidates(){
+	   var candidtes=document.getElementById("tbody candidates");
+        var count_tr=candidtes.childElementCount;
+        var element=document.getElementById("myinput candidates")
+        var input_value=element.value;
+        if(input_value.toString()===""){
+            for(let id=0;id<count_tr+1;++id){
+            let tr_element=document.getElementById("can"+id);
+           
+            tr_element.hidden=false;
+            
+        }   
+        }
+        var input_text=input_value.toString();
+        for(let id=0;id<count_tr+1;++id){
+            let name_elements=document.getElementById("canemail"+id);
+            let tr_element=document.getElementById("can"+id);
+            let name_text=name_elements.textContent;
+            if(name_text.includes(input_text)==false){
+                
+                tr_element.hidden=true;
+            }
+            
+        }
+	   
+   } 
+    </script>
+</head>
+<body>
+    <div th:replace="employer_nav_bar.html"></div>
+    <div class="container">
+		<h4>Candidates</h4>
+        <input placeholder="Search Candidates Email" id="myinput candidates" class="form-control" oninput="searchcandidates()" type="text">
+        <div class="table-container">
+            
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                        <th>Resume</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody candidates">
+                    <!-- Table 1 rows here -->
+                    <tr th:each="candidate,iStat : ${candidates}" th:id="'can'+${iStat.index}">
+                        <td th:text="${candidate.firstname}"></td>
+                         <td th:text="${candidate.lastname}"></td>
+                         <td  th:text="${candidate.email}" th:id="'canemail'+${iStat.index}"></td>
+                         <td >
+							 <a th:href="@{'/profile/' + ${candidate.username}}">Resume</a>
+						 </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4>Interview</h4>
+        <input placeholder="Search Candidates Email" id="myinput interview" class="form-control" oninput="searchinterview()" type="text">
+            
+        <div class="table-container">
+            
+            
+            <table class="table">
+                <thead>
+                    <tr>
+						<th>Firstname</th>
+						<th>Lastname</th>
+                        <th>Email</th>
+                        <th>Job title</th>
+                        <th>Date applied</th>
+                        <th>Status</th>
+                        <th>Interview date</th>
+                        <th>Interview time</th>
+                        <th>Assign</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="tbody interview">
+                    <!-- Table 2 rows here -->
+                    <tr   th:each="selected_application,iStat : ${applications}" th:id="'intr' + ${iStat.index}">
+						<td th:text="${selected_application.user.firstname}"></td>
+						<td th:text="${selected_application.user.lastname}"></td>
+                        <td  th:text="${selected_application.user.email}" th:id="'intremail' + ${iStat.index}"></td>
+                        <td th:text="${selected_application.joboffers.title}"></td>
+                        <td th:text="${selected_application.dateapplied}"></td>
+                        <td th:text="${selected_application.status}"></td>
+                        <td th:text="${selected_application.interview != null ? selected_application.interview.date : ''}"></td>
+                        <td th:text="${selected_application.interview != null ? selected_application.interview.time : ''}"></td>
+                        <td>
+                            <button th:if="${selected_application.interview != null}" class="btn btn-warning update" th:onclick="'showForm(this, ' + ${selected_application.id} + ')'">Update Interview</button>
+                            <button th:unless="${selected_application.interview != null}" class="btn btn-primary assign"th:onclick="'showForm(this, ' + ${selected_application.id} + ')'">Assign Interview</button>
+                            <div th:id="'form' + ${selected_application.id}" class="form-container">
+								<form th:action="@{/company/submitinterview}" method="post">
+                                <input type="datetime-local" name="datetime" class="form-control">
+                                <input type="text" th:value="${selected_application.id}" name="applicaton_id" hidden>
+                                <select name="type" class="form-control">
+									<option value="default" disabled selected>select the type of interview</option>
+                                    <option value="ONLINE">Online</option>
+                                    <option value="IN_PERSON">In Person</option>
+                                </select>
+                                <button class="btn btn-primary">Submit</button>
+								</form>
+                            </div>
+                        </td>
+                        <td>
+						    <form th:if="${selected_application.interview != null}" th:action="@{'/employer/deleteinterview/' + ${selected_application.id}}" method="post">
+						        <button type="submit" class="btn btn-danger">Delete</button>
+						    </form>
+						</td>
+
+                    </tr>
+                </tbody >
+            </table>
+        </div>
+    </div>
+</body>
+</html>

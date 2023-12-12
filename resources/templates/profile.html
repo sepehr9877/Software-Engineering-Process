@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <section class="content-header" th:replace="~{include::profile_title}"></section>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-color: #007bff;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .table {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #212529;
+      border-collapse: collapse;
+    }
+
+    .table th, .table td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+    }
+
+    .table th {
+      font-weight: bold;
+    }
+
+    .table tbody th {
+      font-weight: normal;
+    }
+
+    .btn-group {
+      margin-bottom: 10px;
+    }
+      </style>
+</head>
+
+<body>
+
+  <div name="profile"/>
+  <div class="content-header" th:replace="~{profile_nav_bar.html}"></div>
+  
+<div class="container">
+
+<section class="content-header" th:replace="~{include::profile_top}"></section>
+
+<br>
+<br>
+
+<div class="resume">
+  <h3>File</h3>
+
+  <div th:if="${user.resume == null} and ${authname == user.username}">
+	<form method="post" th:action="@{/profile/create}" th:object="${user}">
+		<input type="hidden" name="username" th:field="*{username}">
+		<button type="submit" name="profile" value="create">Create Profile</button>
+	</form>
+  </div>
+
+  <div th:if="${user.resume != null}">
+
+	<div th:if="${user.resume.resumeFile == null} and ${authname == user.username}">
+		<form method="post" th:action="@{/profile/upload}" enctype="multipart/form-data">			 
+			<input type="hidden" name="username" th:field="${user.username}">
+			<input type="file" name="file" accept="application/pdf" class="file-input" required>
+			<button type="submit" class="btn btn-primary">Upload</button>
+		</form>
+	</div>
+	<div th:if="${user.resume.resumeFile}">
+		<a th:href="@{/profile/file/} + ${user.resume.resumeFile.id}" th:text="${user.resume.resumeFile.name}"></a>
+	</div>
+<br>
+<br>
+
+
+	<h3>Education</h3>
+
+	<div th:if="${updateeducation != true}">
+		
+		<table class="table" >
+			<thead>
+				<th>Degree</th>
+				<th>University</th>
+				<th>StartDate</th>
+				<th>FinishedDate</th>
+			</thead>
+			<tbody>
+				<tr th:each="it, itemStat : ${user.resume.education}"  th:if="${user.resume.education}">
+			<td><span th:text="${it.degree}" th:if="${it.isRemoved != true}"></span></td>
+			<td><span th:text="${it.university}" th:if="${it.isRemoved != true}"></span></td>
+			<td><span th:text="${it.startDate}" th:if="${it.isRemoved != true}"></span></td>
+			<td><span th:text="${it.finishDate}" th:if="${it.isRemoved != true}"></span></td>
+
+			<td><form method="post" th:action="@{/profile/updateeducation}"
+				th:if="${it.isRemoved != true} and ${authname == user.username}
+				and ${updateexperience == false} and ${updateskill == false}">
+				
+				<input type="hidden" name="index" th:value="${itemStat.index}">
+				<input type="hidden" name="username" th:field="${user.username}">
+				<button type="submit" class="btn btn-primary" name="profile" value="update">Edit</button>
+				<button type="submit" class="btn btn-danger" name="profile" value="remove" th:onclick="return confirmDelete()">Remove</button>
+			</form></td>
+
+			</tr>
+			</tbody>
+			
+		</table>
+
+		<form method="post" th:action="@{/profile/updateeducation}" th:if="${authname == user.username} 
+			and ${updateexperience == false} and ${updateskill == false}">
+			
+			<input type="hidden" name="index" th:value="9999999">
+			<!--<input type="hidden" name="id" value="1">-->
+			<input type="hidden" name="username" th:field="${user.username}">
+			<button type="submit" class="btn btn-primary" name="profile" value="update">Add</button>
+		</form>
+	</div>		
+
+	<form method="post" th:action="@{/profile/saveeducation}" th:object="${education}" th:if="${updateeducation == true} and ${authname == user.username}">
+
+		<label>Degree</label>
+		<input type="text" th:field="*{degree}" required /><br/>
+		<label>University</label>
+		<input type="text" th:field="*{university}" required /><br/>
+		<label>Start Date</label>
+		<input type="date" th:field="*{startDate}" required /><br/>
+		<label>Finish Date</label>
+		<input type="date" th:field="*{finishDate}" /><br/>
+
+		<input type="hidden" name="username" th:field="${user.username}">
+		<input type="hidden" name="id" th:field="*{id}">
+		<button type="submit" class="btn btn-success" name="profile" value="save">Save</button>
+		<button type="submit" class="btn btn-warning" name="profile" value="cancel" formnovalidate>Cancel</button>
+	</form>
+
+	<p><h3>Experience</h3>
+
+	<div th:if="${updateexperience != true}">
+		
+		<table class="table" >
+			<thead>
+				<th>Comapny</th>
+				<th>Description</th>
+				<th>StartDate</th>
+				<th>FinishedDate</th>
+			</thead>
+			<tbody>
+				<tr th:each="it, itemStat : ${user.resume.experience}" th:if="${user.resume.experience}">
+			<td><span th:text="${it.company}" th:if="${it.isRemoved != true}"></span></td>
+			<td><span th:text="${it.description}" th:if="${it.isRemoved != true}"></span></td>
+			<td><span th:text="${it.startDate}" th:if="${it.isRemoved != true}"></span></td>
+			<td><span th:text="${it.finishDate}" th:if="${it.isRemoved != true}"></span></td>
+
+			<td><form method="post" th:action="@{/profile/updateexperience}"
+				th:if="${it.isRemoved != true} and ${authname == user.username}
+				and ${updateeducation == false} and ${updateskill == false}">
+
+				<input type="hidden" name="index" th:value="${itemStat.index}">
+				<input type="hidden" name="username" th:field="${user.username}">
+				<button type="submit" class="btn btn-primary" name="profile" value="update">Edit</button>
+				<button type="submit" class="btn btn-danger" name="profile" value="remove" th:onclick="return confirmDelete()">Remove</button>
+			</form></td>
+
+			</tr>
+			</tbody>
+			
+		</table>
+
+		<form method="post" th:action="@{/profile/updateexperience}" th:if="${authname == user.username}
+				and ${updateeducation == false} and ${updateskill == false}">
+			
+			<input type="hidden" name="index" th:value="9999999">
+			<input type="hidden" name="username" th:field="${user.username}">
+			<button type="submit" class="btn btn-primary" name="profile" value="update">Add</button>
+		</form>
+	</div>		
+
+	<form method="post" th:action="@{/profile/saveexperience}" th:object="${experience}" th:if="${updateexperience == true}">
+
+		<label>Company</label>
+		<input type="text" th:field="*{company}" required /><br/>
+		<label>Description</label>
+		<input type="text" th:field="*{description}" required /><br/>
+		<label>Start Date</label>
+		<input type="date" th:field="*{startDate}" th:value="*{startDate}" required /><br/>
+		<label>Finish Date</label>
+		<input type="date" th:field="*{finishDate}" th:value="*{finishDate}" /><br/>
+
+		<input type="hidden" name="username" th:field="${user.username}">
+		<input type="hidden" name="id" th:field="*{id}">
+		<button type="submit" class="btn btn-success" name="profile" value="save">Save</button>
+		<button type="submit" class="btn btn-warning" name="profile" value="cancel" formnovalidate>Cancel</button>
+	</form>
+
+	<p><h3>Skills</h3>
+
+	<div th:if="${updateskill != true}">
+		
+		<table class="table">
+			<thead>
+				<th>Skill</th>
+				<th>Description</th>
+			</thead>
+			<tbody>
+				<tr  th:each="it, itemStat : ${user.resume.skills}" th:if="${user.resume.skills}">
+
+			<td th:text="${it.name}" th:if="${it.isRemoved != true}"></td>
+			<td th:text="${it.description}" th:if="${it.isRemoved != true}"></td>		
+			
+			<td><form method="post" th:action="@{/profile/updateskill}"
+				th:if="${it.isRemoved != true} and ${authname == user.username}
+				and ${updateeducation == false} and ${updateexperience == false}">
+
+				<input type="hidden" name="index" th:value="${itemStat.index}">
+				<input type="hidden" name="username" th:field="${user.username}">
+				<button type="submit" class="btn btn-primary" name="profile" value="update">Edit</button>
+				<button class="btn btn-danger" name="profile" value="remove" th:onclick="return confirmDelete()">Remove</button>
+			</form>
+			</td>
+
+			</tr>
+			</tbody>
+			
+		</table>
+
+		<form method="post" th:action="@{/profile/updateskill}" th:if="${authname == user.username} 
+			and ${updateeducation == false} and ${updateexperience == false}">
+			
+			<input type="hidden" name="index" th:value="9999999">
+			<input type="hidden" name="username" th:field="${user.username}">
+			<button type="submit" class="btn btn-primary" name="profile" value="update">Add</button>
+		</form>
+	</div>		
+
+	<form method="post" th:action="@{/profile/saveskill}" th:object="${skill}" th:if="${updateskill == true} and ${authname == user.username}">
+
+		<label>Skill</label>
+		<input type="text" th:field="*{name}" required /><br/>
+		<label>Description</label>
+		<input type="text" th:field="*{description}" required /><br/>
+
+		<input type="hidden" name="username" th:field="${user.username}">
+		<input type="hidden" name="id" th:field="*{id}">
+		<button type="submit" class="btn btn-success" name="profile" value="save">Save</button>
+		<button type="submit" class="btn btn-warning" name="profile" value="cancel" formnovalidate>Cancel</button>
+	</form>
+
+  </div>
+  
+</div>
+
+<script th:inline="javascript">
+  function confirmDelete() {
+    return confirm("Are you sure you want to remove this?");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to WhateverJobYouChoose</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 5%;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .components {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .log, .register {
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the Log and Register buttons */
+        .log button, .register button {
+            background-color: #1E90FF;
+            color: #fff;
+            padding: 15px 40px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .log button:hover, .register button:hover {
+            background-color: #4169E1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Welcome to WhateverJobYouChoose</div>
+        <div class="components">
+            <div class="log">
+                <h2>Log In</h2>
+                <!-- Add your log form or content here -->
+                <button onclick="redirectToLogin()">Log In</button>
+            </div>
+            <div class="register">
+                <h2>Register</h2>
+                <!-- Add your register form or content here -->
+                <button onclick="redirectToRegister()">Register</button>
+            </div>
+        </div>
+    </div>
+</body>
+ <script>
+        function redirectToLogin() {
+            window.location.href = "/login";
+        }
+
+        function redirectToRegister() {
+            window.location.href = "/register";
+        }
+    </script>
+</html>
+

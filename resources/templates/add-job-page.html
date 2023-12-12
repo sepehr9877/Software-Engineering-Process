@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Job Offer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ccc;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #343a40;
+    }
+  </style>
+</head>
+
+<body>
+	<div th:replace="employer_nav_bar.html"></div>
+<div class="container">
+  <h1 class="mt-5 mb-3">Add Job Offer</h1>
+  <form th:action="@{/company/saveJobOffer}" method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" name="title" placeholder="Enter job title" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" name="description" rows="5" placeholder="Enter job description"
+                required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="staff">Staff</label>
+      <input type="number" class="form-control" id="staff" name="staff" placeholder="Enter number of staff" required>
+    </div>
+    <div class="form-group">
+      <label for="company">Company</label>
+      <input type="text" class="form-control" id="company" name="company" placeholder="Enter company name" required>
+    </div>
+    <div class="form-group">
+      <label for="lowsalery">lowsalery</label>
+      <input type="number" class="form-control" id="lowsalery" name="lowsalery" placeholder="Enter lowsalery amount"
+             required>
+    </div>
+    <div class="form-group">
+      <label for="highsalery">highsalery</label>
+      <input type="number" class="form-control" id="highsalery" name="highsalery" placeholder="Enter highsalery amount"
+             required>
+    </div>
+    <div class="form-group">
+      <label for="published">Published</label>
+      <input type="date" class="form-control" id="published" name="published" required>
+    </div>
+    <div class="form-group">
+      <label for="deadline">Deadline</label>
+      <input type="date" class="form-control" id="deadline" name="deadline" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

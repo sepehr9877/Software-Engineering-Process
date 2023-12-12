@@ -1,0 +1,33 @@
+<h3>Applications</h3>
+
+<table class="table" >
+
+  <thead>
+    <th>Title</th>
+    <th>Company</th>
+    <th>Applied</th>
+    <th>Status</th>
+    <th></th>
+  </thead>
+  
+  <tbody>
+  	<tr th:if="${applicationList.empty}">
+		<td colspan="5"> No Applications to show </td>
+	</tr>
+    <tr th:each="it : ${applicationList}" th:if="${applicationList}">
+	
+      <td><a th:href="@{/company/REPLACE/} + ${it.id}" th:text="${it.joboffers.title}" th:if="${it.joboffers}"/></td>
+      <td><span th:text="${it.joboffers.company.name}" th:if="${it.joboffers}"/></td>
+      <td><span th:text="${it.dateapplied}"/></td>
+      <td><span th:text="${it.status}"/></td>
+
+      <td><form method="get" th:action="@{'/jobs/applications/view/' + ${it.id}}" th:object="${it}">
+
+        <input type="hidden" name="id" th:value="${it.id}">
+        <button type="submit" class="btn btn-primary" value="view">View</button>
+		
+      </form></td>
+    </tr>
+  </tbody>
+	
+</table>

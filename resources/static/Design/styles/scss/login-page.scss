@@ -1,0 +1,168 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.login-page-Heo {
+  width: 100%;
+  height: 90rem;
+  position: relative;
+  background-color: #fffbfb;
+
+  .rectangle-2-E4F {
+    height: 78.5rem;
+    position: absolute;
+    left: 37.5rem;
+    top: 5.5rem;
+    border: solid 0.1rem #a1a4d6;
+    box-sizing: border-box;
+    background-color: #efefff;
+    width: 69rem;
+  }
+  .whatever-job-you-choose-MPm {
+    width: 29.4rem;
+    height: 9.8rem;
+    cursor: pointer;
+    left: 55.7rem;
+    font-weight: 400;
+    color: #00a3ff;
+    font-family: Holtwood One SC, 'Source Sans Pro';
+    position: absolute;
+    top: 8.9rem;
+    font-size: 3rem;
+    line-height: 1.6275;
+  }
+  .field-location-43H {
+    height: 9.9rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.27;
+    font-family: Gelasio, 'Source Sans Pro';
+    background-color: #d2e6f1;
+    position: absolute;
+    left: 46rem;
+    box-sizing: border-box;
+    width: 52rem;
+    top: 28.1rem;
+    display: flex;
+    color: black;
+    white-space: nowrap;
+    border: solid 0.1rem #00a3ff;
+
+    &::placeholder {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.27;
+      color: #7376b6;
+      font-family: Gelasio, 'Source Sans Pro';
+
+    }
+  }
+  .field-location-Gv3 {
+    justify-content: center;
+    color: black;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 52rem;
+    height: 10.1rem;
+    top: 42.5rem;
+    align-items: center;
+    font-weight: 400;
+    font-family: Gelasio, 'Source Sans Pro';
+    border: solid 0.1rem #00a3ff;
+    position: absolute;
+    left: 46rem;
+    display: flex;
+    line-height: 1.27;
+    font-size: 2rem;
+    background-color: #d2e6f1;
+
+    &::placeholder {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.27;
+      color: #7376b6;
+      font-family: Gelasio, 'Source Sans Pro';
+
+    }
+  }
+  .button-W3h {
+    width: 17.8rem;
+    top: 57.2rem;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    border: solid 0.1rem #000345;
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    height: 9.9rem;
+    font-family: Gelasio, 'Source Sans Pro';
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: #a1a4d6;
+    cursor: pointer;
+    position: absolute;
+    left: 63.1rem;
+    line-height: 1.27;
+    color: #000345;
+  }
+  .forgot-password-Mq1 {
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #000000;
+    white-space: nowrap;
+    height: 2.6rem;
+    font-weight: 700;
+    line-height: 1.27;
+    left: 63.3rem;
+    position: absolute;
+    display: flex;
+    font-family: Gelasio, 'Source Sans Pro';
+    cursor: pointer;
+    top: 71rem;
+    width: 17.4rem;
+  }
+  .error--4jR {
+    position: absolute;
+    left: 46rem;
+    top: 53.95rem;
+    white-space: nowrap;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.27;
+    color: #ff0000;
+    font-family: Gelasio, 'Source Sans Pro';
+  }
+  .error--BZ9 {
+    font-size: 1.5rem;
+    line-height: 1.27;
+    white-space: nowrap;
+    height: 2rem;
+    display: flex;
+    left: 46rem;
+    top: 38.45rem;
+    font-weight: 700;
+    color: #ff0000;
+    font-family: Gelasio, 'Source Sans Pro';
+    width: 5rem;
+    position: absolute;
+  }
+}

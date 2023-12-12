@@ -1,0 +1,41 @@
+<h3>Job Offers</h3>
+
+<table class="table" >
+
+  <thead>
+    <th>Title</th>
+    <th>Company</th>
+    <th>Description</th>
+    <th>Salary</th>
+    <th>Deadline</th>
+    <th>Apply</th>
+  </thead>
+  
+  <tbody>
+	<tr th:if="${jobofferList.empty}">
+		<td colspan="5"> No Job Offers to show </td>
+	</tr>
+
+    <tr th:each="joboffer : ${jobofferList}">
+	
+      <!--<td><a th:href="@{/}" th:text="${it.joboffers.title} th:if="${it.joboffers}"/></td>-->
+      <td><span th:text="${joboffer.title}" /></td>
+      <td><span th:text="${joboffer.company.name}" th:if="${joboffer.company}" /></td>
+      <td><span th:text="${joboffer.description}" /></td>
+      <td><span th:text="${joboffer.lowsalery} + ' / ' + ${joboffer.highsalery}" /></td>
+      <td><span th:text="${joboffer.deadline}" /></td>
+      <td><a th:href="@{/applicant/jobOfferDetails/{id}(id=${joboffer.id})}">Apply</a></td>
+
+<!--
+      <td><form method="get" th:action="@{'/jobs/applications/view/' + ${it.id}}" th:object="${it}">
+
+        <input type="hidden" name="id" th:value="${it.id}">
+        <button type="submit" class="btn btn-primary" value="view">View</button>
+		
+      </form></td>
+-->
+	  
+    </tr>
+  </tbody>
+	
+</table>

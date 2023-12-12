@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Job Offers</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ccc;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    /* Add custom styling for job offer cards */
+    .card {
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      font-weight: bold;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      margin-right: 5px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #343a40;
+    }
+
+  </style>
+</head>
+<body>
+	<div th:replace="employer_nav_bar.html"></div>
+
+
+<div class="container">
+  <h1 class="mt-5 mb-3">My Job Offer</h1>
+  <div class="row">
+    <!-- Iterate through the list of myJobOffers and display each job offer -->
+    <div th:each="jobOffer : ${myJobOffers}" class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 th:text="${jobOffer.title}"></h5>
+        </div>
+        <div class="card-body">
+          <p th:text="${jobOffer.title}"></p>
+          <p th:text="${jobOffer.status}"
+   th:style="${jobOffer.status.name() == 'PENDING' ? 'color: blue;' 
+            : jobOffer.status.name() == 'REJECTED' ? 'color: red;' 
+            : jobOffer.status.name() == 'ACCEPTED' ? 'color: green;' : 'color: black;'}">
+</p>
+
+
+	
+          <p><strong>Company:</strong> <span th:text="${jobOffer.companyName}"></span></p>
+          <p><strong>Published:</strong> <span th:text="${jobOffer.published}"></span></p>
+          <p><strong>Deadline:</strong> <span th:text="${jobOffer.deadline}"></span></p>
+          <p><strong>Low Salary:</strong> <span th:text="${jobOffer.lowsalery}"></span></p>
+          <p><strong>High Salary:</strong> <span th:text="${jobOffer.highsalery}"></span></p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary" th:href="'/company/editJobOffer/'+${jobOffer.id}">Edit</a>
+          <a class="btn btn-danger" th:href="'/company/deleteJobOffer/'+${jobOffer.id}">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript to handle delete functionality -->
+<script>
+    function deleteJobOffer(id) {
+      const confirmation = confirm("Are you sure you want to delete this job offer?");
+      if (confirmation) {
+        fetch(`/deleteJobOffer?id=${id}`, {
+          method: 'GET'
+        })
+        .then(response => {
+          if (response.ok) {
+            // Reload the page to see the updated job offers after deletion.
+            location.reload();
+          } else {
+            console.error('Failed to delete job offer:', response.status);
+          }
+        })
+        .catch(error => console.error('Error deleting job offer:', error));
+      }
+    }
+  </script>
+
+<!-- Add Bootstrap JS for interactive components -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

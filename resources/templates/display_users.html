@@ -1,0 +1,22 @@
+<h3>People</h3>
+
+<table class="table" >
+
+  <thead>
+    <th>Name</th>
+  </thead>
+  
+  <tbody>
+	<tr th:if="${userList.empty}">
+		<td colspan="5"> No People to show </td>
+	</tr>
+
+    <tr th:each="person : ${userList}">
+	
+      <td><a th:href="@{'/profile/' + ${person.username}}" th:text="${person.firstname} + ' ' + ${person.lastname}"/></td>
+      <td><span th:text="${person.firstname} + ' ' + ${person.lastname}" /></td>
+	  
+    </tr>
+  </tbody>
+	
+</table>

@@ -1,0 +1,860 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.home-page-gGw {
+  width: 100%;
+  height: 90rem;
+}
+.home-page-gGw .mainscreen-EpF {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fffbfb;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-jvmd-bPu {
+  width: 144rem;
+  height: 15.0392rem;
+  position: absolute;
+  left: 0;
+  top: 11.5144rem;
+  border-top: solid 0.1rem #000345;
+  box-sizing: border-box;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-jvmd-bPu .frame-1-FDZ {
+  box-sizing: border-box;
+  padding: 4.186rem 9.6rem 3.754rem 11.2rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #d2e6f1;
+  background-color: #ffffff;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-jvmd-bPu .frame-1-FDZ .field-title-M1h {
+  margin: 0.6rem 9.4rem 0rem 0rem;
+  width: 45.8rem;
+  height: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: black;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #00a3ff;
+  box-sizing: border-box;
+  background-color: #d2e6f1;
+  flex-shrink: 0;
+}.home-page-gGw .mainscreen-EpF .auto-group-jvmd-bPu .frame-1-FDZ .field-title-M1h::placeholder {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.27;
+    color: #7376b6;
+    font-family: Gelasio, 'Source Sans Pro';
+}
+.home-page-gGw .mainscreen-EpF .auto-group-jvmd-bPu .frame-1-FDZ .field-location-TU3 {
+  margin: 0rem 7.3rem 0.6rem 0rem;
+  width: 45.8rem;
+  height: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: black;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #00a3ff;
+  box-sizing: border-box;
+  background-color: #d2e6f1;
+  flex-shrink: 0;
+}.home-page-gGw .mainscreen-EpF .auto-group-jvmd-bPu .frame-1-FDZ .field-location-TU3::placeholder {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.27;
+    color: #7376b6;
+    font-family: Gelasio, 'Source Sans Pro';
+}
+.home-page-gGw .mainscreen-EpF .auto-group-jvmd-bPu .frame-1-FDZ .button-U8F {
+  margin-bottom: 1.1rem;
+  width: 14.9rem;
+  height: 6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000345;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000345;
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #a1a4d6;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .footerseparator-EWj {
+  width: 144rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 0;
+  top: 82.2454rem;
+  background-color: #000345;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-83sw-mWf {
+  width: 137.3978rem;
+  height: 9.8rem;
+  position: absolute;
+  left: 1.6128rem;
+  top: 1.6449rem;
+  display: flex;
+  align-items: center;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-83sw-mWf .whatever-job-you-choose-6oq {
+  margin-right: 86.5727rem;
+  max-width: 29.4rem;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.6275;
+  color: #00a3ff;
+  font-family: Holtwood One SC, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-83sw-mWf .group-2-Q3q {
+  margin: 1.88rem 0rem 4.341rem 0rem;
+  box-sizing: border-box;
+  padding-top: 0.9324rem;
+  height: calc(100% - 6.2206rem);
+  display: flex;
+  align-items: flex-end;
+  border-top: solid 0.1rem #000000;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-83sw-mWf .group-2-Q3q .sign-in-qew {
+  margin: 0rem 2.965rem 0.047rem 0rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000345;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-83sw-mWf .group-2-Q3q .register-ZL3 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000345;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .online-support-GkF {
+  width: 10.3rem;
+  height: 2rem;
+  cursor: pointer;
+  position: absolute;
+  left: 124.3348rem;
+  top: 84.5352rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000345;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX {
+  width: 140.0872rem;
+  height: 54.9869rem;
+  position: absolute;
+  left: 1.6128rem;
+  top: 26.5535rem;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV {
+  width: 52.5352rem;
+  height: 54.9869rem;
+  position: absolute;
+  left: 87.552rem;
+  top: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV .container-aPZ {
+  width: 52.5rem;
+  height: 54.9rem;
+  position: absolute;
+  left: 0.0352rem;
+  top: 0.0465rem;
+  border: solid 0.1rem #7376b6;
+  box-sizing: border-box;
+  background-color: #efefff;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV .software-engineer-fvo {
+  width: 24rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 1.2352rem;
+  top: 1.1465rem;
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV .company-a-jfm {
+  width: 10.3rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 1.2352rem;
+  top: 4.1965rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV .montreal-qc-remote-rkP {
+  width: 20.9rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 1.3352rem;
+  top: 6.6465rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV .h-full-time-Nyd {
+  width: 14.9rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 1.3352rem;
+  top: 9.5465rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV .line-1-5t3 {
+  width: 52.5rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 0.0352rem;
+  top: 12.8465rem;
+  background-color: #000345;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV .button-QvK {
+  width: 13.4rem;
+  height: 4.3rem;
+  cursor: pointer;
+  position: absolute;
+  left: 37.3352rem;
+  top: 6.7465rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000345;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000345;
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #a1a4d6;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .jobdesc-fXV .job-description-s3D {
+  width: 15.4rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 1.3352rem;
+  top: 14.2465rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB {
+  box-sizing: border-box;
+  padding-top: 0.9465rem;
+  width: 87.552rem;
+  height: 54.9869rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  row-gap: 2.1535rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F {
+  box-sizing: border-box;
+  padding: 0.946rem 2.713rem 1.092rem 5.737rem;
+  height: 10.1465rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #a1a4d6;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #efefff;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F .company-a-zGF {
+  margin: 0rem 17.05rem 0.508rem 0rem;
+  max-width: 12.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F .auto-group-cjcb-drw {
+  margin-right: 22.8628rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F .auto-group-cjcb-drw .software-engineer-Zkb {
+  margin: 0rem 0.024rem 0.608rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F .auto-group-cjcb-drw .full-time-3fm {
+  margin: 0rem 0rem 0.9rem 0.055rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F .auto-group-cjcb-drw .montreal-qc-remote-XL3 {
+  margin-left: 0.7244rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F .auto-group-vfqq-Sxo {
+  margin: 1.999rem 0rem 1.178rem 0rem;
+  height: calc(100% - 3.1773rem);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F .auto-group-vfqq-Sxo .posted--zDd {
+  margin: 0rem 0rem 0.931rem 0.116rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-h2F .auto-group-vfqq-Sxo .july-9-2023-6XZ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX {
+  box-sizing: border-box;
+  padding: 0.946rem 2.713rem 1.092rem 5.737rem;
+  height: 10.1465rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #a1a4d6;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #efefff;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX .company-a-KQK {
+  margin: 0rem 17.05rem 0.508rem 0rem;
+  max-width: 12.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX .auto-group-nuco-p6B {
+  margin-right: 22.8628rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX .auto-group-nuco-p6B .software-engineer-kEj {
+  margin: 0rem 0.024rem 0.608rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX .auto-group-nuco-p6B .full-time-FhH {
+  margin: 0rem 0rem 0.9rem 0.055rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX .auto-group-nuco-p6B .montreal-qc-remote-y7V {
+  margin-left: 0.7244rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX .auto-group-hzgw-rwy {
+  margin: 1.999rem 0rem 1.178rem 0rem;
+  height: calc(100% - 3.1773rem);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX .auto-group-hzgw-rwy .posted--xVD {
+  margin: 0rem 0rem 0.931rem 0.116rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-axX .auto-group-hzgw-rwy .july-9-2023-gw1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX {
+  box-sizing: border-box;
+  padding: 0.946rem 2.713rem 1.092rem 5.737rem;
+  height: 10.1465rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #a1a4d6;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #efefff;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX .company-a-VtT {
+  margin: 0rem 17.05rem 0.508rem 0rem;
+  max-width: 12.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX .auto-group-bopv-yYj {
+  margin-right: 22.8628rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX .auto-group-bopv-yYj .software-engineer-Xq9 {
+  margin: 0rem 0.024rem 0.608rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX .auto-group-bopv-yYj .full-time-RvX {
+  margin: 0rem 0rem 0.9rem 0.055rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX .auto-group-bopv-yYj .montreal-qc-remote-mDh {
+  margin-left: 0.7244rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX .auto-group-avyu-Hhq {
+  margin: 1.999rem 0rem 1.178rem 0rem;
+  height: calc(100% - 3.1773rem);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX .auto-group-avyu-Hhq .posted--Rp3 {
+  margin: 0rem 0rem 0.931rem 0.116rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-PaX .auto-group-avyu-Hhq .july-9-2023-9EF {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V {
+  box-sizing: border-box;
+  padding: 0.946rem 2.713rem 1.092rem 5.737rem;
+  height: 10.1465rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #a1a4d6;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #efefff;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V .company-a-igf {
+  margin: 0rem 17.05rem 0.508rem 0rem;
+  max-width: 12.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V .auto-group-qa2s-zeB {
+  margin-right: 22.8628rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V .auto-group-qa2s-zeB .software-engineer-9X5 {
+  margin: 0rem 0.024rem 0.608rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V .auto-group-qa2s-zeB .full-time-FKD {
+  margin: 0rem 0rem 0.9rem 0.055rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V .auto-group-qa2s-zeB .montreal-qc-remote-kFy {
+  margin-left: 0.7244rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V .auto-group-chnp-TRH {
+  margin: 1.999rem 0rem 1.178rem 0rem;
+  height: calc(100% - 3.1773rem);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V .auto-group-chnp-TRH .posted--mB5 {
+  margin: 0rem 0rem 0.931rem 0.116rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-p5V .auto-group-chnp-TRH .july-9-2023-g39 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X {
+  box-sizing: border-box;
+  padding: 0.946rem 2.713rem 1.092rem 4.787rem;
+  height: 10.1465rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #a1a4d6;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #efefff;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X .company-a-WXy {
+  margin: 0rem 16.1rem 0.508rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X .auto-group-z8ib-cL7 {
+  margin-right: 22.8628rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X .auto-group-z8ib-cL7 .software-engineer-LG7 {
+  margin: 0rem 0.024rem 0.608rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X .auto-group-z8ib-cL7 .full-time-4T1 {
+  margin: 0rem 0rem 0.9rem 0.055rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X .auto-group-z8ib-cL7 .montreal-qc-remote-PkB {
+  margin-left: 0.7244rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.27;
+  color: #000000;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X .auto-group-qsgb-8By {
+  margin: 1.999rem 0rem 1.178rem 0rem;
+  height: calc(100% - 3.1773rem);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X .auto-group-qsgb-8By .posted--fBu {
+  margin: 0rem 0rem 0.931rem 0.116rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.home-page-gGw .mainscreen-EpF .auto-group-ebmy-KiX .joblist-nAB .listing-a8X .auto-group-qsgb-8By .july-9-2023-b5Z {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #a1a4d6;
+  font-family: Gelasio, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}

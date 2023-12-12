@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        function verifyUserName(){
+            var userName = document.getElementById("userName").value;
+            var userNameMsg = document.getElementById("userNameMsg");
+			
+            // Send an AJAX request to check if the username exists
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // Response received successfully
+                    var response = xhr.responseText;
+                    var userNameMsg = document.getElementById("userNameMsg");
+					
+                    if (response === "true") {
+                        userNameMsg.innerHTML = "Username not available. Please select another username.";
+                        console.log(userNameMsg)
+                        userNameMsg.style.color = "red";
+                    } else{
+                        userNameMsg.innerHTML = " ";
+                    }
+                } else {
+                        // Error handling
+                        userNameMsg.innerHTML = "Error occurred while checking username.";
+                        userNameMsg.style.color = "red";
+                    }
+                }
+            };
+            xhr.open("GET", "/checkUsername?username=" + userName, true);
+            xhr.send();
+        }
+
+        function verifyEmailFormat(){
+			
+            var email = document.getElementById("email").value;
+            var emailMsg = document.getElementById("emailMsg");
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!email.match(emailPattern)){
+                emailMsg.innerHTML = "Email format is not correct. Please enter your email address again.";
+                emailMsg.style.color = "red";
+            }else{
+                emailMsg.innerHTML = " ";
+            }
+        }
+        function checkPasswordMatch() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            var passwordMatchMsg = document.getElementById("passwordMatchMsg");
+
+            if (password === confirmPassword) {
+                passwordMatchMsg.innerHTML = "Passwords match!";
+                passwordMatchMsg.style.color = "green";
+            } else {
+                passwordMatchMsg.innerHTML = "Passwords do not match!";
+                passwordMatchMsg.style.color = "red";
+            }
+        }
+    </script>
+    <style>
+		body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* Add your desired background color */
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #fff; /* Add your desired background color */
+            border-radius: 10px; /* Add border radius to give it a more shaped appearance */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box-shadow for depth */
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .button1 {
+            background-color: #007bff; /* Add your desired button color */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px; /* Add border radius to the button */
+            display: block;
+            margin: 20px auto; /* Center the button */
+        }
+
+        .button1:hover {
+            background-color: #0056b3; /* Add your desired button color on hover */
+        }
+	</style>
+</head>
+<div class="container">
+		     <h2 class="text-center">Whatever Job You Choose</h2>
+		     <p class="text-center">Please fill in the following form to sign up</p>
+		    
+		    <form th:action="@{/register}" method="post">
+                <div class="form-group">
+                    <label for="userName">User Name</label>
+                    <input class="form-control" type="text" id="userName" name="userName" onblur="verifyUserName()" required>
+                    <span id="userNameMsg"></span>
+                </div>
+
+
+                <div class="form-group">
+		            <label for="email">Email</label>
+		            <input class="form-control" type="email" id="email" name="email" onblur="verifyEmailFormat()" required>
+		            <span id="emailMsg"></span>
+		        </div>
+
+
+
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input class="form-control" type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input class="form-control" type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input class="form-control" type="password" id="confirmPassword" name="confirmPassword" required onblur="checkPasswordMatch()">
+            <span id="passwordMatchMsg"></span>
+        </div>
+
+
+<!--        <div class="form-group">-->
+<!--            <label for="type">Choose your status:</label>-->
+
+<!--            <select name="type" id="type" class="form-control">-->
+<!--                <option value="employer">Employer</option>-->
+<!--                <option value="candidate">Candidate</option>-->
+<!--            </select>-->
+<!--        </div>-->
+
+
+        <button type="submit" id="submit" class="button button1">Sign Up</button>
+        <p>Already have an account?<a href="/login">Login</a></p>
+    </form>
+
+    <!-- Panel for existing user -->
+    <div th:if="${userExists}">
+        <h2>Account Already Exists!</h2>
+        <p>This username is already registered. Do you want to log in instead?</p>
+        <a href="/login">Login</a>
+    </div>
+</div>
+</body>
+</html>

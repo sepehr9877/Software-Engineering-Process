@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS if needed -->
+    <!-- Add custom styles for centering the form -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* Add your desired background color */
+        }
+
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff; /* Add your desired background color */
+            border-radius: 10px; /* Add border radius to give it a more shaped appearance */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box-shadow for depth */
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .button1 {
+            background-color: #007bff; /* Add your desired button color */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px; /* Add border radius to the button */
+        }
+
+        .button1:hover {
+            background-color: #0056b3; /* Add your desired button color on hover */
+        }
+
+        .sign-up-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .sign-up-line::before,
+        .sign-up-line::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .sign-up-line span {
+            margin: 0 10px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="text-align: center;">Whatever Job You Choose</h2>
+    <p style="text-align: center;">Please enter your username and password to sign in.</p>
+    <!-- Display login error message if it exists -->
+    <div th:if="${loginError}" class="alert alert-danger">
+        <p th:text="${loginError}">DefaultValue</p>
+    </div>
+    <form action="/submit" method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <button type="submit" id="submit" class="button button1">Submit</button>
+    </form>
+
+    <div class="sign-up-line">
+        <span>If you don't have an account, please<a href="/register"> sign up</a></span>
+        <!-- You can add a link here to redirect users to the sign-up page -->
+    </div>
+</div>
+
+<!-- Add Bootstrap JS (optional, only if you need Bootstrap features like modal, etc.) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

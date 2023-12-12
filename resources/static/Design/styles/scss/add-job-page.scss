@@ -1,0 +1,471 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.add-job-page-emV {
+  width: 100%;
+  height: 90rem;
+
+  .add-job-offer-page-ciK {
+    box-sizing: border-box;
+    padding: 1.645rem 0rem 3.465rem 0rem;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffbfb;
+
+    .header-jnw {
+      box-sizing: border-box;
+      padding: 0 1.6128rem;
+      width: 100%;
+      height: 9.9695rem;
+      border-bottom: solid 0.1rem #000345;
+      flex-shrink: 0;
+
+      .auto-group-ihnp-tfq {
+        width: 136.165rem;
+        height: 9.8rem;
+        display: flex;
+        align-items: flex-start;
+
+        .whatever-job-you-choose-e9D {
+          line-height: 1.6275;
+          font-family: Holtwood One SC, 'Source Sans Pro';
+          margin-right: 87.1761rem;
+          max-width: 29.4rem;
+          cursor: pointer;
+          font-size: 3rem;
+          font-weight: 400;
+          color: #00a3ff;
+          flex-shrink: 0;
+        }
+        .userinfo-ZGB {
+          margin-bottom: 2.0898rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+
+          .john-smith-v6j {
+            display: flex;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.27;
+            color: #000345;
+            font-family: Gelasio, 'Source Sans Pro';
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin: 0.69rem 3.289rem 0rem 0rem;
+            align-items: center;
+            justify-content: center;
+          }
+          .rectangle-1-RpB {
+            flex-shrink: 0;
+            width: 6rem;
+            height: 6rem;
+            object-fit: cover;
+            vertical-align: top;
+          }
+        }
+      }
+    }
+    .auto-group-fuuk-8yV {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      padding: 4.486rem 1.5rem 3.545rem 1.5rem;
+      width: 100%;
+
+      .auto-group-xzpy-SUP {
+        width: calc(100% - 5rem);
+        height: 48.8rem;
+        display: flex;
+        align-items: flex-end;
+        flex-shrink: 0;
+        margin: 0rem 5rem 4.4rem 0rem;
+
+        .fields1-jyH {
+          flex-shrink: 0;
+          margin-right: 6.8rem;
+          width: 66.1rem;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+
+          .auto-group-oe5m-51Z {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            padding: 0rem 0rem 1.9rem 0.1rem;
+            width: 100%;
+            align-items: flex-end;
+
+            .auto-group-e4pq-Pnw {
+              margin-bottom: 1.9rem;
+              width: 100%;
+              height: 5.7rem;
+              display: flex;
+              align-items: center;
+              flex-shrink: 0;
+
+              .job-title--8kX {
+                line-height: 1.27;
+                color: #000000;
+                font-family: Gelasio, 'Source Sans Pro';
+                white-space: nowrap;
+                flex-shrink: 0;
+                margin: 0rem 16rem 1.1rem 0rem;
+                font-size: 2rem;
+                font-weight: 400;
+              }
+              .title-Rjd {
+                display: flex;
+                font-family: Gelasio, 'Source Sans Pro';
+                white-space: nowrap;
+                border: solid 0.1rem #00a3ff;
+                box-sizing: border-box;
+                flex-shrink: 0;
+                background-color: #d2e6f1;
+                height: 100%;
+                align-items: center;
+                font-size: 2rem;
+                width: 42.1rem;
+                justify-content: center;
+                font-weight: 400;
+                line-height: 1.27;
+                color: black;
+
+                &::placeholder {
+                  font-family: Gelasio, 'Source Sans Pro';
+                  font-size: 2rem;
+                  font-weight: 400;
+                  line-height: 1.27;
+                  color: #7376b6;
+
+                }
+              }
+            }
+            .auto-group-obut-fts {
+              margin-bottom: 1.7rem;
+              width: 100%;
+              height: 5.7rem;
+              display: flex;
+              align-items: center;
+              flex-shrink: 0;
+
+              .company-name--d51 {
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 1.27;
+                color: #000000;
+                font-family: Gelasio, 'Source Sans Pro';
+                white-space: nowrap;
+                flex-shrink: 0;
+                margin: 0rem 9.4rem 1.1rem 0rem;
+              }
+              .company-kQX {
+                border: solid 0.1rem #00a3ff;
+                background-color: #d2e6f1;
+                height: 100%;
+                display: flex;
+                color: black;
+                flex-shrink: 0;
+                width: 42.1rem;
+                align-items: center;
+                justify-content: center;
+                line-height: 1.27;
+                font-size: 2rem;
+                font-weight: 400;
+                font-family: Gelasio, 'Source Sans Pro';
+                white-space: nowrap;
+                box-sizing: border-box;
+
+                &::placeholder {
+                  color: #7376b6;
+                  font-family: Gelasio, 'Source Sans Pro';
+                  font-size: 2rem;
+                  font-weight: 400;
+                  line-height: 1.27;
+
+                }
+              }
+            }
+            .auto-group-h7d1-1bM {
+              margin-bottom: 1.9rem;
+              width: 100%;
+              height: 5.7rem;
+              display: flex;
+              align-items: center;
+              flex-shrink: 0;
+
+              .type-of-employment--ZMy {
+                white-space: nowrap;
+                flex-shrink: 0;
+                margin: 0rem 5.1rem 0.7rem 0rem;
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 1.27;
+                color: #000000;
+                font-family: Gelasio, 'Source Sans Pro';
+              }
+              .contract-HYs {
+                color: black;
+                font-family: Gelasio, 'Source Sans Pro';
+                flex-shrink: 0;
+                font-weight: 400;
+                align-items: center;
+                line-height: 1.27;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                font-size: 2rem;
+                white-space: nowrap;
+                background-color: #d2e6f1;
+                height: 100%;
+                border: solid 0.1rem #00a3ff;
+                width: 42.1rem;
+
+                &::placeholder {
+                  font-size: 2rem;
+                  font-weight: 400;
+                  line-height: 1.27;
+                  color: #7376b6;
+                  font-family: Gelasio, 'Source Sans Pro';
+
+                }
+              }
+            }
+            .auto-group-ufuk-wdR {
+              margin-bottom: 1.9rem;
+              width: 100%;
+              height: 5.7rem;
+              display: flex;
+              align-items: center;
+              flex-shrink: 0;
+
+              .number-of-staff--toZ {
+                font-family: Gelasio, 'Source Sans Pro';
+                white-space: nowrap;
+                flex-shrink: 0;
+                margin: 0rem 9.4rem 1.3rem 0rem;
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 1.27;
+                color: #000000;
+              }
+              .staff-E6j {
+                display: flex;
+                font-weight: 400;
+                white-space: nowrap;
+                height: 100%;
+                color: black;
+                border: solid 0.1rem #00a3ff;
+                justify-content: center;
+                font-family: Gelasio, 'Source Sans Pro';
+                background-color: #d2e6f1;
+                flex-shrink: 0;
+                width: 42.1rem;
+                align-items: center;
+                font-size: 2rem;
+                line-height: 1.27;
+                box-sizing: border-box;
+
+                &::placeholder {
+                  font-size: 2rem;
+                  font-weight: 400;
+                  line-height: 1.27;
+                  color: #7376b6;
+                  font-family: Gelasio, 'Source Sans Pro';
+
+                }
+              }
+            }
+            .auto-group-onuf-VoM {
+              display: flex;
+              align-items: center;
+              flex-shrink: 0;
+              width: 100%;
+              height: 5.7rem;
+
+              .salary--egF {
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 1.27;
+                color: #000000;
+                font-family: Gelasio, 'Source Sans Pro';
+                white-space: nowrap;
+                flex-shrink: 0;
+                margin: 0.3rem 17.7rem 0rem 0rem;
+              }
+              .salary-AuV {
+                color: black;
+                border: solid 0.1rem #00a3ff;
+                background-color: #d2e6f1;
+                line-height: 1.27;
+                align-items: center;
+                font-size: 2rem;
+                font-weight: 400;
+                font-family: Gelasio, 'Source Sans Pro';
+                box-sizing: border-box;
+                flex-shrink: 0;
+                width: 42.1rem;
+                display: flex;
+                height: 100%;
+                white-space: nowrap;
+                justify-content: center;
+
+                &::placeholder {
+                  color: #7376b6;
+                  font-family: Gelasio, 'Source Sans Pro';
+                  font-size: 2rem;
+                  font-weight: 400;
+                  line-height: 1.27;
+
+                }
+              }
+            }
+          }
+          .auto-group-wkdh-cmV {
+            width: 100%;
+            height: 5.7rem;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+
+            .application-deadline-date--yc3 {
+              line-height: 1.27;
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              flex-shrink: 0;
+              margin: 0.3rem 0.7rem 0rem 0rem;
+              font-size: 2rem;
+              font-weight: 400;
+            }
+            .deadline-uVh {
+              width: 42.1rem;
+              display: flex;
+              align-items: center;
+              line-height: 1.27;
+              white-space: nowrap;
+              font-size: 2rem;
+              border: solid 0.1rem #00a3ff;
+              background-color: #d2e6f1;
+              font-weight: 400;
+              color: black;
+              height: 100%;
+              justify-content: center;
+              font-family: Gelasio, 'Source Sans Pro';
+              box-sizing: border-box;
+              flex-shrink: 0;
+
+              &::placeholder {
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 1.27;
+                color: #7376b6;
+                font-family: Gelasio, 'Source Sans Pro';
+
+              }
+            }
+          }
+        }
+        .jobdesc-ZKM {
+          flex-direction: column;
+          flex-shrink: 0;
+          height: 100%;
+          display: flex;
+
+          .job-description--7bm {
+            font-family: Gelasio, 'Source Sans Pro';
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-bottom: 2.7rem;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.27;
+            color: #000000;
+          }
+          .descript-rZM {
+            width: 62.7rem;
+            font-weight: 400;
+            color: black;
+            border: solid 0.1rem #00a3ff;
+            margin-left: 0.4rem;
+            line-height: 1.27;
+            box-sizing: border-box;
+            font-size: 2rem;
+            background-color: #d2e6f1;
+            flex-shrink: 0;
+            padding: 1.4943rem 1.54rem;
+            height: 43.5rem;
+            font-family: Gelasio, 'Source Sans Pro';
+            white-space: nowrap;
+
+            &::placeholder {
+              font-family: Gelasio, 'Source Sans Pro';
+              font-size: 2rem;
+              font-weight: 400;
+              line-height: 1.27;
+              color: #7376b6;
+
+            }
+          }
+        }
+      }
+      .button-6ib {
+        align-items: center;
+        justify-content: center;
+        color: #000345;
+        font-family: Gelasio, 'Source Sans Pro';
+        box-sizing: border-box;
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+        background-color: #a1a4d6;
+        cursor: pointer;
+        flex-shrink: 0;
+        width: calc(100% - 121.9rem);
+        height: 9.4rem;
+        font-size: 2rem;
+        line-height: 1.27;
+        margin: 0rem 61rem 0rem 60.9rem;
+        white-space: nowrap;
+        display: flex;
+        border: solid 0.1rem #000345;
+        font-weight: 400;
+      }
+    }
+    .footer-Z6P {
+      display: flex;
+      align-items: center;
+      border-top: solid 0.1rem #000345;
+      flex-shrink: 0;
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: Gelasio, 'Source Sans Pro';
+      padding: 2.29rem 9.365rem 0rem 124.335rem;
+      justify-content: center;
+      color: #000345;
+      box-sizing: border-box;
+      line-height: 1.27;
+      white-space: nowrap;
+    }
+  }
+}

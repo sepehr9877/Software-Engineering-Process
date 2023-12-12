@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom CSS here */
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .user-dashboard {
+            background-color: #ff7675;
+        }
+        .logout-dashboard{
+			background-color: blueviolet;
+		}
+        .company-dashboard {
+            background-color: #74b9ff;
+        }
+        .logoutcomponent{
+			background-color: blueviolet;
+		}
+        .admin-dashboard {
+            background-color: #55efc4;
+        }
+        .dashboard-title {
+            font-size: 24px;
+            padding: 20px 0;
+        }
+        .dashboard-content {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="row">
+			<div class="col-md-3">
+                <div class="card logoutcomponent text-white text-center">
+                    <div class="dashboard-title"><a class="nav-link"  th:onclick="'logoutForm.submit();'" style="cursor: pointer;">Logout</a>
+				    <form id="logoutForm" th:action="@{/logout}" method="post" style="display: none;">
+				        
+				    </form></div>
+                    <div class="dashboard-content">
+                        <!-- Add content for Company Dashboard here -->
+                        <p>Logout form Website!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card user-dashboard text-white text-center">
+                    <div class="dashboard-title"><a th:href="@{/jobs}">User Dashboard</a></div>
+                    <div class="dashboard-content">
+                        <!-- Add content for User Dashboard here -->
+                        <p>Welcome to User Dashboard!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card company-dashboard text-white text-center">
+                    <div class="dashboard-title"><a th:href="@{/company/browsecandidate}">Company Dashboard</a></div>
+                    <div class="dashboard-content">
+                        <!-- Add content for Company Dashboard here -->
+                        <p>Welcome to Company Dashboard!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" th:if="${ROLE_ADMIN}">
+		    <div class="card admin-dashboard text-white text-center">
+		        <div class="dashboard-title"><a th:href="@{/admin/posts}">Admin Dashboard</a></div>
+		        <div class="dashboard-content">
+		            <!-- Add content for Admin Dashboard here -->
+		            <p>Welcome to Admin Dashboard!</p>
+		        </div>
+		    </div>
+		</div>
+		<div class="col-md-3" th:unless="${ROLE_ADMIN}">
+		    <div class="card text-white text-center">
+		        <div class="dashboard-title">You are not authorized</div>
+		        <div class="dashboard-content">
+		            <!-- Add content for non-admin users here -->
+		            <p>You do not have access to this section.</p>
+		        </div>
+		    </div>
+		</div>
+		
+
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

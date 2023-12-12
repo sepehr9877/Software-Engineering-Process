@@ -1,0 +1,223 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Edit Job Offer</title>-->
+<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+<!--  <style>-->
+<!--    /* Custom CSS */-->
+<!--    body {-->
+<!--      background-color: #f8f9fa; /* Change the background color */-->
+<!--    }-->
+
+<!--    .container {-->
+<!--      max-width: 500px; /* Adjust the container width */-->
+<!--      margin: auto;-->
+<!--      padding: 20px;-->
+<!--      border: 1px solid #dee2e6; /* Add a border around the container */-->
+<!--      border-radius: 10px; /* Round the container corners */-->
+<!--      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */-->
+<!--    }-->
+
+<!--    h1 {-->
+<!--      text-align: center;-->
+<!--      color: #007bff; /* Change the heading color */-->
+<!--    }-->
+
+<!--    .form-group label {-->
+<!--      font-weight: bold; /* Make the labels bold */-->
+<!--    }-->
+
+<!--    .form-control {-->
+<!--      border-color: #007bff; /* Change the border color of the input fields */-->
+<!--    }-->
+
+<!--    .form-control:focus {-->
+<!--      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a box shadow when the input is focused */-->
+<!--    }-->
+
+<!--    .btn-primary {-->
+<!--      background-color: #007bff; /* Change the submit button color */-->
+<!--      border-color: #007bff;-->
+<!--    }-->
+
+<!--    .btn-primary:hover {-->
+<!--      background-color: #0056b3; /* Change the submit button color on hover */-->
+<!--      border-color: #0056b3;-->
+<!--    }-->
+<!--  </style>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div class="container">-->
+<!--  <h1 class="mt-5 mb-3">Edit Job Offer</h1>-->
+<!--  <form action="/employer/editJobOffer" method="POST">-->
+<!--    <div class="form-group">-->
+<!--      <label for="title">Title</label>-->
+<!--      <input type="text" class="form-control" id="title" name="title" th:value="${jobOffer.title}" required>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="description">Description</label>-->
+<!--      <textarea class="form-control" id="description" name="description" rows="5" th:text="${jobOffer.description}" required></textarea>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="staff">Staff</label>-->
+<!--      <input type="number" class="form-control" id="staff" name="staff" th:value="${jobOffer.staff}" required>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="company">Company</label>-->
+<!--      <input type="text" class="form-control" id="company" name="company" th:value="${jobOffer.company}" required>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="lowsalery">lowsalery</label>-->
+<!--      <input type="number" class="form-control" id="lowsalery" name="lowsalery" th:value="${jobOffer.lowsalery}" required>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="highsalery">highsalery</label>-->
+<!--      <input type="number" class="form-control" id="highsalery" name="highsalery" th:value="${jobOffer.highsalery}" required>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="published">Published</label>-->
+<!--      <input type="date" class="form-control" id="published" name="published" th:value="${jobOffer.published}" required>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label for="deadline">Deadline</label>-->
+<!--      <input type="date" class="form-control" id="deadline" name="deadline" th:value="${jobOffer.deadline}" required>-->
+<!--    </div>-->
+<!--    <input type="hidden" id="jobOfferId" name="jobOfferId" th:value="${jobOffer.id}" />-->
+<!--    <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--  </form>-->
+<!--</div>-->
+
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+<!--</body>-->
+
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Job Offer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+    body {
+      background-color: #f8f9fa; /* Change the background color */
+    }
+
+    .navbar {
+      background-color: #343a40; /* Change the navigation bar background color */
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ccc;
+    }
+
+    .container {
+      max-width: 500px; /* Adjust the container width */
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #dee2e6; /* Add a border around the container */
+      border-radius: 10px; /* Round the container corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      margin-top: 50px; /* Add margin to the top to give space for the navigation bar */
+    }
+
+    h1 {
+      text-align: center;
+      color: #343a40; /* Change the heading color */
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .form-group label {
+      font-weight: bold; /* Make the labels bold */
+    }
+
+    .form-control {
+      border-color: #007bff; /* Change the border color of the input fields */
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a box shadow when the input is focused */
+    }
+
+    .btn-primary {
+      background-color: #007bff; /* Change the submit button color */
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3; /* Change the submit button color on hover */
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Navigation Bar -->
+<div th:replace="employer_nav_bar.html"></div>
+<div class="container">
+  <h1 class="mt-5 mb-3">Edit Job Offer</h1>
+  <form th:action="@{/company/editJobOffer}" method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" name="title" th:value="${jobOffer.title}" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" name="description" rows="5"
+                th:text="${jobOffer.description}" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="staff">Staff</label>
+      <input type="number" class="form-control" id="staff" name="staff" th:value="${jobOffer.staff}" required>
+    </div>
+    <div class="form-group">
+      <label for="company">Company</label>
+      <input type="text" class="form-control" id="company" name="company" th:value="${jobOffer.companyName}" required>
+    </div>
+    <div class="form-group">
+      <label for="lowsalery">Low Salary</label>
+      <input type="number" class="form-control" id="lowsalery" name="lowsalery" th:value="${jobOffer.lowsalery}"
+             required>
+    </div>
+    <div class="form-group">
+      <label for="highsalery">High Salary</label>
+      <input type="number" class="form-control" id="highsalery" name="highsalery" th:value="${jobOffer.highsalery}"
+             required>
+    </div>
+    <div class="form-group">
+      <label for="published">Published</label>
+      <input type="date" class="form-control" id="published" name="published" th:value="${jobOffer.published}"
+             required>
+    </div>
+    <div class="form-group">
+      <label for="deadline">Deadline</label>
+      <input type="date" class="form-control" id="deadline" name="deadline" th:value="${jobOffer.deadline}" required>
+    </div>
+    <input type="hidden" id="jobOfferId" name="jobOfferId" th:value="${jobOffer.id}" />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

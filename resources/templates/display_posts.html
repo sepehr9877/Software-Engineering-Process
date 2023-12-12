@@ -1,0 +1,35 @@
+<h3>Feed</h3>
+
+<form method="post" th:action="@{/feed}" th:object="${newpost}" th:if="${allowPost == true}">
+  <input type="text" th:field="*{comment}" th:value="*{comment}" length=60 required /><br/>
+  <button type="submit" class="btn btn-primary" name="profile" value="post">Post</button>
+</form>
+
+<table class="table" >
+
+  <tbody>
+	<tr th:if="${postList.empty}">
+		<td colspan="5"> No Posts to show </td>
+	</tr>
+  
+    <tr th:each="post : ${postList}">
+	
+	  <table>
+	    <tr>
+          <td><a th:href="'/profile/' + ${post.user.username}" th:text="${post.user.firstname} + ' ' + ${post.user.lastname}" th:if="${post.user != null}"/></td>
+	    </tr>
+	    <tr>
+          <td><span th:text="${post.dateTime}" /></td>
+	    </tr>
+	    <tr>
+          <td><span th:text="${post.comment}" /></td>
+	    </tr>
+	    <tr>
+          <td><a th:href="${post.content}" th:text="${post.content}" th:if="${post.type != 'TEXT'}"/></td>
+	    </tr>
+      </table>
+	  <br>
+    </tr>
+  </tbody>
+	
+</table>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+  </style>
+</head>
+<body>
+<div th:replace="admin_nav_bar.html"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="mt-4 mb-3">Manage Users</h1>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Username</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Resume</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+          <td th:text="${user.username}"></td>
+          <td th:text="${user.firstname}" ></td>
+          <td th:text="${user.lastname}" ></td>
+		 <td><a th:href="@{'/profile/' + ${user.username}}">Resume</a></td>
+
+          <td th:text="${user.email}" ></td>
+          <td>
+            <a th:if="${user.isActive}" class="btn btn-warning btn-sm" th:href="@{'/admin/users/deactivate_user/'+${user.id}}">Deactivate</a>
+            <a th:if="${!user.isActive}" class="btn btn-success btn-sm" th:href="@{'/admin/users/activate_user/'+${user.id}}">Activate</a>
+<!--            <a class="btn btn-danger btn-sm" th:href="@{'/admin/users/delete/'+${user.id}}">Delete</a>-->
+        </tr>
+
+        <!-- Add more user rows -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

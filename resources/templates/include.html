@@ -1,0 +1,11 @@
+<section class="content-header" th:fragment="profile_title">
+  <title th:text="${user.firstname} + ' ' + ${user.lastname} + ' | Whatever Job You Choose'"></title>
+</section>
+
+<section class="content-header" th:fragment="profile_top">
+  <table>
+	<tr><td><h3><span th:text="${user.firstname} + ' ' + ${user.lastname}"></h3></td></tr>
+	<!--<tr><td><span th:if="${user.company != null}" th:text="${user.company}"></p></td></tr>-->
+	<tr><td><span th:if="${user.email != null}" th:text="${user.email}"></p></td></tr>
+  </table>
+</section>

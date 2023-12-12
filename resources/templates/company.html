@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <section class="content-header" th:replace="include::profile_title"></section>
+   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div name="profile_employer">
+  <div class="content-header" th:replace="employer_nav_bar.html"></div>
+
+<div class="container">
+  
+  <br><a href="/company/addJobOffer">Add Job Offer</a>
+  <br><a href="/company/myJobOffers">My Job Offer</a>
+  
+</div>
+</body>
+</html>

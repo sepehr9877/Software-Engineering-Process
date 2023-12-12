@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <section class="content-header">
+	<title th:text="' Application | Whatever Job You Choose'"></title>
+  </section>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-color: #007bff;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .table {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #212529;
+      border-collapse: collapse;
+    }
+
+    .table th, .table td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+    }
+
+    .table th {
+      font-weight: bold;
+    }
+
+    .table tbody th {
+      font-weight: normal;
+    }
+
+    .btn-group {
+      margin-bottom: 10px;
+    }
+      </style>
+</head>
+
+<body>
+  <div class="content-header" th:replace="~{profile_nav_bar.html}"/>
+
+  <div class="container">
+
+    <h3>Job Offer</h3>
+
+    <table class="table" >
+
+      <thead>
+        <th>Title</th>
+        <th>Status</th>
+        <th></th>
+      </thead>
+  
+      <tbody>
+        <tr th:if="${applicationData != null} and ${applicationData.joboffers != null}">
+	
+          <td><span th:text="${applicationData.joboffers.title}"/></td>
+          <td><span th:text="${applicationData.joboffers.company.name}"/></td>
+
+        </tr>
+      </tbody>
+	
+    </table>
+
+    <p>
+
+    <h3>Application</h3>
+
+    <table class="table" >
+
+      <thead>
+        <th>Applied</th>
+        <th>Status</th>
+        <th></th>
+      </thead>
+  
+      <tbody>
+        <tr th:if="${applicationData != null}">
+	
+          <td><span th:text="${applicationData.dateapplied}"/></td>
+          <td><span th:text="${applicationData.status}"/></td>
+
+        </tr>
+      </tbody>
+	
+    </table>
+
+    <div th:if="${applicationData != null} and ${applicationData.interview != null}">
+      <p>
+      <h3>Interview</h3>
+
+      <table class="table" >
+
+        <thead>
+          <th>Type</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th></th>
+        </thead>
+  
+        <tbody>
+          <tr th:if="${applicationData != null} and ${applicationData.interview != null}">
+	
+            <td><span th:text="${applicationData.interview.type}"/></td>
+            <td><span th:text="${applicationData.interview.date}"/></td>
+            <td><span th:text="${applicationData.interview.time}"/></td>
+
+          </tr>
+        </tbody>
+	
+      </table>
+	
+    </div>
+	
+  </div>
+
+</body>
+</html>

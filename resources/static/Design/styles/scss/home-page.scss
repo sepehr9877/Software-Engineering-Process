@@ -1,0 +1,890 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.home-page-gGw {
+  width: 100%;
+  height: 90rem;
+
+  .mainscreen-EpF {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fffbfb;
+
+    .auto-group-jvmd-bPu {
+      top: 11.5144rem;
+      border-top: solid 0.1rem #000345;
+      box-sizing: border-box;
+      width: 144rem;
+      height: 15.0392rem;
+      position: absolute;
+      left: 0;
+
+      .frame-1-FDZ {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        padding: 4.186rem 9.6rem 3.754rem 11.2rem;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        border: solid 0.1rem #d2e6f1;
+        background-color: #ffffff;
+        box-sizing: border-box;
+
+        .field-title-M1h {
+
+          &::placeholder {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.27;
+            color: #7376b6;
+            font-family: Gelasio, 'Source Sans Pro';
+
+          }
+          white-space: nowrap;
+          margin: 0.6rem 9.4rem 0rem 0rem;
+          color: black;
+          line-height: 1.27;
+          font-family: Gelasio, 'Source Sans Pro';
+          border: solid 0.1rem #00a3ff;
+          font-size: 2rem;
+          font-weight: 400;
+          flex-shrink: 0;
+          height: 6.5rem;
+          box-sizing: border-box;
+          align-items: center;
+          justify-content: center;
+          background-color: #d2e6f1;
+          width: 45.8rem;
+          display: flex;
+        }
+        .field-location-TU3 {
+          background-color: #d2e6f1;
+          flex-shrink: 0;
+          justify-content: center;
+          white-space: nowrap;
+          box-sizing: border-box;
+          border: solid 0.1rem #00a3ff;
+          width: 45.8rem;
+          align-items: center;
+          line-height: 1.27;
+          font-family: Gelasio, 'Source Sans Pro';
+          margin: 0rem 7.3rem 0.6rem 0rem;
+          font-size: 2rem;
+          font-weight: 400;
+          height: 6.5rem;
+          display: flex;
+          color: black;
+
+          &::placeholder {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.27;
+            color: #7376b6;
+            font-family: Gelasio, 'Source Sans Pro';
+
+          }
+        }
+        .button-U8F {
+          margin-bottom: 1.1rem;
+          align-items: center;
+          box-sizing: border-box;
+          flex-shrink: 0;
+          cursor: pointer;
+          line-height: 1.27;
+          color: #000345;
+          font-weight: 400;
+          font-family: Gelasio, 'Source Sans Pro';
+          white-space: nowrap;
+          box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+          background-color: #a1a4d6;
+          width: 14.9rem;
+          height: 6rem;
+          justify-content: center;
+          display: flex;
+          font-size: 2rem;
+          border: solid 0.1rem #000345;
+        }
+      }
+    }
+    .footerseparator-EWj {
+      position: absolute;
+      left: 0;
+      top: 82.2454rem;
+      background-color: #000345;
+      width: 144rem;
+      height: 0.1rem;
+    }
+    .auto-group-83sw-mWf {
+      width: 137.3978rem;
+      height: 9.8rem;
+      position: absolute;
+      left: 1.6128rem;
+      top: 1.6449rem;
+      display: flex;
+      align-items: center;
+
+      .whatever-job-you-choose-6oq {
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 1.6275;
+        font-family: Holtwood One SC, 'Source Sans Pro';
+        flex-shrink: 0;
+        margin-right: 86.5727rem;
+        max-width: 29.4rem;
+        cursor: pointer;
+        color: #00a3ff;
+      }
+      .group-2-Q3q {
+        height: calc(100% - 6.2206rem);
+        display: flex;
+        align-items: flex-end;
+        border-top: solid 0.1rem #000000;
+        flex-shrink: 0;
+        margin: 1.88rem 0rem 4.341rem 0rem;
+        box-sizing: border-box;
+        padding-top: 0.9324rem;
+
+        .sign-in-qew {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          font-weight: 400;
+          font-family: Gelasio, 'Source Sans Pro';
+          white-space: nowrap;
+          margin: 0rem 2.965rem 0.047rem 0rem;
+          align-items: center;
+          font-size: 2rem;
+          line-height: 1.27;
+          color: #000345;
+          flex-shrink: 0;
+        }
+        .register-ZL3 {
+          font-weight: 400;
+          line-height: 1.27;
+          white-space: nowrap;
+          flex-shrink: 0;
+          color: #000345;
+          font-family: Gelasio, 'Source Sans Pro';
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+        }
+      }
+    }
+    .online-support-GkF {
+      top: 84.5352rem;
+      align-items: center;
+      font-family: Gelasio, 'Source Sans Pro';
+      white-space: nowrap;
+      cursor: pointer;
+      justify-content: center;
+      font-weight: 400;
+      display: flex;
+      height: 2rem;
+      left: 124.3348rem;
+      font-size: 1.5rem;
+      color: #000345;
+      width: 10.3rem;
+      line-height: 1.27;
+      position: absolute;
+    }
+    .auto-group-ebmy-KiX {
+      top: 26.5535rem;
+      width: 140.0872rem;
+      height: 54.9869rem;
+      position: absolute;
+      left: 1.6128rem;
+
+      .jobdesc-fXV {
+        position: absolute;
+        left: 87.552rem;
+        top: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+        width: 52.5352rem;
+        height: 54.9869rem;
+
+        .container-aPZ {
+          left: 0.0352rem;
+          top: 0.0465rem;
+          border: solid 0.1rem #7376b6;
+          box-sizing: border-box;
+          background-color: #efefff;
+          width: 52.5rem;
+          height: 54.9rem;
+          position: absolute;
+        }
+        .software-engineer-fvo {
+          left: 1.2352rem;
+          color: #000000;
+          white-space: nowrap;
+          line-height: 1.27;
+          width: 24rem;
+          height: 3.2rem;
+          position: absolute;
+          top: 1.1465rem;
+          display: flex;
+          font-size: 2.5rem;
+          font-weight: 700;
+          font-family: Gelasio, 'Source Sans Pro';
+        }
+        .company-a-jfm {
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.27;
+          white-space: nowrap;
+          width: 10.3rem;
+          top: 4.1965rem;
+          left: 1.2352rem;
+          display: flex;
+          color: #000000;
+          font-family: Gelasio, 'Source Sans Pro';
+          height: 2.6rem;
+          position: absolute;
+        }
+        .montreal-qc-remote-rkP {
+          white-space: nowrap;
+          top: 6.6465rem;
+          display: flex;
+          font-size: 2rem;
+          font-family: Gelasio, 'Source Sans Pro';
+          font-weight: 400;
+          line-height: 1.27;
+          color: #000000;
+          width: 20.9rem;
+          height: 2.6rem;
+          position: absolute;
+          left: 1.3352rem;
+        }
+        .h-full-time-Nyd {
+          display: flex;
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.27;
+          font-family: Gelasio, 'Source Sans Pro';
+          white-space: nowrap;
+          position: absolute;
+          height: 2.6rem;
+          left: 1.3352rem;
+          top: 9.5465rem;
+          color: #000000;
+          width: 14.9rem;
+        }
+        .line-1-5t3 {
+          width: 52.5rem;
+          height: 0.1rem;
+          position: absolute;
+          left: 0.0352rem;
+          top: 12.8465rem;
+          background-color: #000345;
+        }
+        .button-QvK {
+          font-family: Gelasio, 'Source Sans Pro';
+          box-sizing: border-box;
+          height: 4.3rem;
+          position: absolute;
+          top: 6.7465rem;
+          justify-content: center;
+          white-space: nowrap;
+          width: 13.4rem;
+          display: flex;
+          align-items: center;
+          color: #000345;
+          font-weight: 400;
+          border: solid 0.1rem #000345;
+          box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+          background-color: #a1a4d6;
+          cursor: pointer;
+          left: 37.3352rem;
+          font-size: 2rem;
+          line-height: 1.27;
+        }
+        .job-description-s3D {
+          font-weight: 400;
+          line-height: 1.27;
+          color: #000000;
+          white-space: nowrap;
+          width: 15.4rem;
+          height: 2.6rem;
+          position: absolute;
+          left: 1.3352rem;
+          top: 14.2465rem;
+          font-size: 2rem;
+          font-family: Gelasio, 'Source Sans Pro';
+        }
+      }
+      .joblist-nAB {
+        top: 0;
+        flex-direction: column;
+        left: 0;
+        padding-top: 0.9465rem;
+        width: 87.552rem;
+        height: 54.9869rem;
+        position: absolute;
+        overflow: hidden;
+        row-gap: 2.1535rem;
+        display: flex;
+        box-sizing: border-box;
+        background-color: #ffffff;
+
+        .listing-h2F {
+          height: 10.1465rem;
+          cursor: pointer;
+          display: flex;
+          box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+          flex-shrink: 0;
+          box-sizing: border-box;
+          padding: 0.946rem 2.713rem 1.092rem 5.737rem;
+          align-items: center;
+          border: solid 0.1rem #a1a4d6;
+          background-color: #efefff;
+
+          .company-a-zGF {
+            max-width: 12.2rem;
+            justify-content: center;
+            line-height: 1.27;
+            flex-shrink: 0;
+            color: #000000;
+            font-family: Gelasio, 'Source Sans Pro';
+            margin: 0rem 17.05rem 0.508rem 0rem;
+            display: flex;
+            align-items: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+          }
+          .auto-group-cjcb-drw {
+            margin-right: 22.8628rem;
+            height: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+
+            .software-engineer-Zkb {
+              justify-content: center;
+              font-size: 2rem;
+              white-space: nowrap;
+              display: flex;
+              align-items: center;
+              font-weight: 400;
+              line-height: 1.27;
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              flex-shrink: 0;
+              margin: 0rem 0.024rem 0.608rem 0rem;
+            }
+            .full-time-3fm {
+              color: #000000;
+              white-space: nowrap;
+              margin: 0rem 0rem 0.9rem 0.055rem;
+              display: flex;
+              font-size: 1.5rem;
+              line-height: 1.27;
+              font-family: Gelasio, 'Source Sans Pro';
+              flex-shrink: 0;
+              align-items: center;
+              justify-content: center;
+              font-weight: 400;
+            }
+            .montreal-qc-remote-XL3 {
+              display: flex;
+              align-items: center;
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              margin-left: 0.7244rem;
+              justify-content: center;
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 1.27;
+              flex-shrink: 0;
+            }
+          }
+          .auto-group-vfqq-Sxo {
+            height: calc(100% - 3.1773rem);
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin: 1.999rem 0rem 1.178rem 0rem;
+
+            .posted--zDd {
+              color: #a1a4d6;
+              white-space: nowrap;
+              margin: 0rem 0rem 0.931rem 0.116rem;
+              display: flex;
+              font-size: 1.5rem;
+              line-height: 1.27;
+              font-family: Gelasio, 'Source Sans Pro';
+              flex-shrink: 0;
+              align-items: center;
+              justify-content: center;
+              font-weight: 700;
+            }
+            .july-9-2023-6XZ {
+              justify-content: center;
+              font-size: 1.5rem;
+              font-weight: 700;
+              line-height: 1.27;
+              color: #a1a4d6;
+              display: flex;
+              align-items: center;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              flex-shrink: 0;
+            }
+          }
+        }
+        .listing-axX {
+          box-sizing: border-box;
+          height: 10.1465rem;
+          display: flex;
+          border: solid 0.1rem #a1a4d6;
+          box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+          background-color: #efefff;
+          flex-shrink: 0;
+          padding: 0.946rem 2.713rem 1.092rem 5.737rem;
+          cursor: pointer;
+          align-items: center;
+
+          .company-a-KQK {
+            justify-content: center;
+            line-height: 1.27;
+            color: #000000;
+            font-family: Gelasio, 'Source Sans Pro';
+            flex-shrink: 0;
+            margin: 0rem 17.05rem 0.508rem 0rem;
+            max-width: 12.2rem;
+            display: flex;
+            align-items: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+          }
+          .auto-group-nuco-p6B {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin-right: 22.8628rem;
+            height: 100%;
+            align-items: center;
+
+            .software-engineer-kEj {
+              align-items: center;
+              justify-content: center;
+              color: #000000;
+              display: flex;
+              font-size: 2rem;
+              font-weight: 400;
+              line-height: 1.27;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              flex-shrink: 0;
+              margin: 0rem 0.024rem 0.608rem 0rem;
+            }
+            .full-time-FhH {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              margin: 0rem 0rem 0.9rem 0.055rem;
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 1.27;
+              color: #000000;
+            }
+            .montreal-qc-remote-y7V {
+              margin-left: 0.7244rem;
+              align-items: center;
+              justify-content: center;
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              display: flex;
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 1.27;
+              flex-shrink: 0;
+            }
+          }
+          .auto-group-hzgw-rwy {
+            flex-shrink: 0;
+            margin: 1.999rem 0rem 1.178rem 0rem;
+            height: calc(100% - 3.1773rem);
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+            .posted--xVD {
+              margin: 0rem 0rem 0.931rem 0.116rem;
+              justify-content: center;
+              font-size: 1.5rem;
+              line-height: 1.27;
+              color: #a1a4d6;
+              flex-shrink: 0;
+              display: flex;
+              align-items: center;
+              font-weight: 700;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+            }
+            .july-9-2023-gw1 {
+              flex-shrink: 0;
+              display: flex;
+              font-weight: 700;
+              line-height: 1.27;
+              color: #a1a4d6;
+              font-family: Gelasio, 'Source Sans Pro';
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5rem;
+              white-space: nowrap;
+            }
+          }
+        }
+        .listing-PaX {
+          box-sizing: border-box;
+          align-items: center;
+          border: solid 0.1rem #a1a4d6;
+          background-color: #efefff;
+          flex-shrink: 0;
+          padding: 0.946rem 2.713rem 1.092rem 5.737rem;
+          height: 10.1465rem;
+          cursor: pointer;
+          display: flex;
+          box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+
+          .company-a-VtT {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #000000;
+            font-family: Gelasio, 'Source Sans Pro';
+            margin: 0rem 17.05rem 0.508rem 0rem;
+            max-width: 12.2rem;
+            font-weight: 700;
+            line-height: 1.27;
+          }
+          .auto-group-bopv-yYj {
+            flex-direction: column;
+            flex-shrink: 0;
+            margin-right: 22.8628rem;
+            height: 100%;
+            align-items: center;
+            display: flex;
+
+            .software-engineer-Xq9 {
+              align-items: center;
+              font-weight: 400;
+              line-height: 1.27;
+              font-size: 2rem;
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              flex-shrink: 0;
+              margin: 0rem 0.024rem 0.608rem 0rem;
+              display: flex;
+              justify-content: center;
+            }
+            .full-time-RvX {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5rem;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              flex-shrink: 0;
+              margin: 0rem 0rem 0.9rem 0.055rem;
+              font-weight: 400;
+              line-height: 1.27;
+              color: #000000;
+            }
+            .montreal-qc-remote-mDh {
+              color: #000000;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 1.27;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              margin-left: 0.7244rem;
+              flex-shrink: 0;
+            }
+          }
+          .auto-group-avyu-Hhq {
+            flex-direction: column;
+            flex-shrink: 0;
+            margin: 1.999rem 0rem 1.178rem 0rem;
+            height: calc(100% - 3.1773rem);
+            align-items: center;
+            display: flex;
+
+            .posted--Rp3 {
+              font-weight: 700;
+              color: #a1a4d6;
+              font-family: Gelasio, 'Source Sans Pro';
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5rem;
+              margin: 0rem 0rem 0.931rem 0.116rem;
+              line-height: 1.27;
+              white-space: nowrap;
+              flex-shrink: 0;
+            }
+            .july-9-2023-9EF {
+              align-items: center;
+              flex-shrink: 0;
+              white-space: nowrap;
+              display: flex;
+              justify-content: center;
+              font-size: 1.5rem;
+              font-weight: 700;
+              line-height: 1.27;
+              color: #a1a4d6;
+              font-family: Gelasio, 'Source Sans Pro';
+            }
+          }
+        }
+        .listing-p5V {
+          border: solid 0.1rem #a1a4d6;
+          box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+          flex-shrink: 0;
+          box-sizing: border-box;
+          height: 10.1465rem;
+          display: flex;
+          align-items: center;
+          background-color: #efefff;
+          padding: 0.946rem 2.713rem 1.092rem 5.737rem;
+          cursor: pointer;
+
+          .company-a-igf {
+            line-height: 1.27;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000000;
+            margin: 0rem 17.05rem 0.508rem 0rem;
+            max-width: 12.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Gelasio, 'Source Sans Pro';
+            flex-shrink: 0;
+          }
+          .auto-group-qa2s-zeB {
+            margin-right: 22.8628rem;
+            height: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+
+            .software-engineer-9X5 {
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              flex-shrink: 0;
+              justify-content: center;
+              font-size: 2rem;
+              font-weight: 400;
+              line-height: 1.27;
+              white-space: nowrap;
+              margin: 0rem 0.024rem 0.608rem 0rem;
+              display: flex;
+              align-items: center;
+            }
+            .full-time-FKD {
+              justify-content: center;
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 1.27;
+              color: #000000;
+              white-space: nowrap;
+              margin: 0rem 0rem 0.9rem 0.055rem;
+              display: flex;
+              align-items: center;
+              font-family: Gelasio, 'Source Sans Pro';
+              flex-shrink: 0;
+            }
+            .montreal-qc-remote-kFy {
+              margin-left: 0.7244rem;
+              justify-content: center;
+              font-weight: 400;
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              display: flex;
+              align-items: center;
+              font-size: 1.5rem;
+              line-height: 1.27;
+              white-space: nowrap;
+              flex-shrink: 0;
+            }
+          }
+          .auto-group-chnp-TRH {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin: 1.999rem 0rem 1.178rem 0rem;
+            height: calc(100% - 3.1773rem);
+            align-items: center;
+
+            .posted--mB5 {
+              color: #a1a4d6;
+              font-family: Gelasio, 'Source Sans Pro';
+              margin: 0rem 0rem 0.931rem 0.116rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5rem;
+              font-weight: 700;
+              line-height: 1.27;
+              white-space: nowrap;
+              flex-shrink: 0;
+            }
+            .july-9-2023-g39 {
+              font-size: 1.5rem;
+              font-weight: 700;
+              line-height: 1.27;
+              color: #a1a4d6;
+              white-space: nowrap;
+              display: flex;
+              align-items: center;
+              flex-shrink: 0;
+              justify-content: center;
+              font-family: Gelasio, 'Source Sans Pro';
+            }
+          }
+        }
+        .listing-a8X {
+          align-items: center;
+          box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+          background-color: #efefff;
+          flex-shrink: 0;
+          box-sizing: border-box;
+          padding: 0.946rem 2.713rem 1.092rem 4.787rem;
+          cursor: pointer;
+          height: 10.1465rem;
+          display: flex;
+          border: solid 0.1rem #a1a4d6;
+
+          .company-a-WXy {
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            white-space: nowrap;
+            color: #000000;
+            font-family: Gelasio, 'Source Sans Pro';
+            flex-shrink: 0;
+            margin: 0rem 16.1rem 0.508rem 0rem;
+            display: flex;
+            font-size: 2.5rem;
+            line-height: 1.27;
+          }
+          .auto-group-z8ib-cL7 {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin-right: 22.8628rem;
+            height: 100%;
+
+            .software-engineer-LG7 {
+              font-size: 2rem;
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              margin: 0rem 0.024rem 0.608rem 0rem;
+              justify-content: center;
+              font-weight: 400;
+              line-height: 1.27;
+              flex-shrink: 0;
+              display: flex;
+              align-items: center;
+            }
+            .full-time-4T1 {
+              flex-shrink: 0;
+              display: flex;
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 1.27;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              margin: 0rem 0rem 0.9rem 0.055rem;
+              align-items: center;
+              justify-content: center;
+              color: #000000;
+            }
+            .montreal-qc-remote-PkB {
+              display: flex;
+              font-size: 1.5rem;
+              font-weight: 400;
+              color: #000000;
+              font-family: Gelasio, 'Source Sans Pro';
+              margin-left: 0.7244rem;
+              align-items: center;
+              justify-content: center;
+              line-height: 1.27;
+              white-space: nowrap;
+              flex-shrink: 0;
+            }
+          }
+          .auto-group-qsgb-8By {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin: 1.999rem 0rem 1.178rem 0rem;
+            height: calc(100% - 3.1773rem);
+
+            .posted--fBu {
+              margin: 0rem 0rem 0.931rem 0.116rem;
+              font-weight: 700;
+              line-height: 1.27;
+              color: #a1a4d6;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              flex-shrink: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5rem;
+            }
+            .july-9-2023-b5Z {
+              display: flex;
+              font-weight: 700;
+              line-height: 1.27;
+              font-family: Gelasio, 'Source Sans Pro';
+              white-space: nowrap;
+              flex-shrink: 0;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5rem;
+              color: #a1a4d6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

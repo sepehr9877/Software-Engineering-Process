@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Job Offers</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ccc;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    /* Add custom styling for job offer cards */
+    .card {
+      margin-bottom: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      font-weight: bold;
+      margin: 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .card-body p {
+      margin: 5px 0;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .job-offer-read-more {
+      text-align: right;
+    }
+
+    .job-offer-read-more a {
+      color: #dc3545;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .job-offer-read-more a:hover {
+      color: #c82333;
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #343a40;
+    }
+  </style>
+</head>
+
+<body>
+<div class="content-header" th:replace="~{profile_nav_bar.html}"/>
+<div class="container">
+  <h1 class="mt-5 mb-3">All Job Offers</h1>
+  <div class="row">
+    <!-- Iterate through the list of jobOffers and display each job offer -->
+    <div th:each="jobOffer : ${jobOffers}" class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 th:text="${jobOffer.title}"></h5>
+        </div>
+        <div class="card-body">
+          <p th:text="${jobOffer.title}"></p>
+          <p><strong>Company:</strong> <span th:text="${jobOffer.companyName}"></span></p>
+          <p><strong>Published:</strong> <span th:text="${jobOffer.published}"></span></p>
+          <p><strong>Deadline:</strong> <span th:text="${jobOffer.deadline}"></span></p>
+          <p><strong>Salary Range:</strong> <span
+                  th:text="${jobOffer.lowsalery} + ' - ' + ${jobOffer.highsalery}"></span></p>
+        </div>
+        <div class="card-footer job-offer-read-more">
+          <a th:href="'/applicant/jobOfferDetails/'+${jobOffer.id}">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

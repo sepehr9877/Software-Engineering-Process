@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<input id="mycsrf" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles for the layout */
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .sidebar {
+            height: 100vh;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .job-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .job-item:hover {
+            background-color: #e9ecef;
+        }
+
+        .job-details {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .job-salary {
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .job-staff {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .job-employer {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .job-description {
+            color: #555;
+        }
+
+        .job-status-select {
+            margin-top: 20px;
+        }
+
+        .btn-update-status {
+            margin-top: 10px;
+        }
+    </style>
+    <title>Job Offers</title>
+</head>
+
+<body>
+    <div th:replace="admin_nav_bar.html"></div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Sidebar -->
+            <div class="col-md-3 sidebar">
+                
+                 <div>
+                    <label for="status-filter">Filter by Status:</label>
+                    <form th:action="@{/admin/filterapplication}" method="post">
+						
+                    <select name="filter" id="status-filter" class="form-control" onchange="this.form.submit()">
+                        <option disabled selected>Filter</option>
+                        <option value="ACCEPTED">Accepted</option>
+                        <option value="REJECTED">Rejected</option>
+                        <option value="PENDING">Pending</option>
+                    </select>
+                </div>
+                <div  th:each="joboffer : ${joboffers}" class="job-item"  
+                    th:data-title="${joboffer.title}"
+                    th:data-id="${joboffer.id}"
+                    th:data-description="${joboffer.description}"
+                    th:data-staff="${joboffer.staff}"
+                    th:data-company="${joboffer.company}"
+                    th:data-highsalary="${joboffer.highsalery}"
+                    th:data-lowsalary="${joboffer.lowsalery}"
+                    th:data-employer="${joboffer.company.user.email}"
+                    th:data-status="${joboffer.status}"
+                    th:onclick="showJobOfferDetail(this)">
+                    <div class="job-title">
+                        <a th:text="${joboffer.title}"></a>
+                    </div>
+                    <div class="job-salary" th:text="'Salary: $' + ${joboffer.lowsalery} + '_' + ${joboffer.highsalery}"></div>
+                    <div class="job-staff" th:text="'Staff: ' + ${joboffer.staff}"></div>
+                    <div class="job-employer" th:text="'Employer: ' + ${joboffer.company.user.email}"></div>
+                    <div class="job-requirements shortened" th:text="'Description: ' + ${joboffer.description}"></div>
+                </div>
+            </div>
+            <!-- Right Section -->
+            <div class="col-md-9">
+    		<div class="job-details" id="selected-job-details"></div>
+			</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/js/bootstrap.min.js"></script>
+    <script>
+		function showJobOfferDetail(element) {
+			
+    var title = element.getAttribute('data-title');
+    var id=element.getAttribute('data-id');
+    var description = element.getAttribute('data-description');
+    var staff = element.getAttribute('data-staff');
+    var lowSalary = element.getAttribute('data-lowsalary');
+    var highSalary = element.getAttribute('data-highsalary');
+    var employer = element.getAttribute('data-employer');
+    var status = element.getAttribute('data-status');
+    var _csrf=document.getElementById("mycsrf").value;
+    var jobDetailsElement = document.getElementById('selected-job-details');
+    jobDetailsElement.innerHTML = `
+        <div class="job-title">${title}</div>
+        <div class="job-salary">Salary: $${lowSalary} - $${highSalary}</div>
+        <div class="job-staff">Staff: ${staff}</div>
+        <div class="job-employer">Employer: ${employer}</div>
+        <div class="job-description">Description: ${description}</div>
+        <div class="job-status-select">
+    <label for="status-select">Status:</label>
+    <form action="/admin/update_joboffer"  method="post">
+		<input type="hidden" name="jobofferId" value="${id}" />
+		<input type="hidden" name="_csrf" value="${_csrf}" />
+        <select id="status-select" name="status" onchange="this.form.submit()" class="form-control">
+            <option value="default" disabled selected>Select status</option>
+            <option value="ACCEPTED" ${status === 'ACCEPTED' ? 'selected' : ''}>Accepted</option>
+            <option value="REJECTED" ${status === 'REJECTED' ? 'selected' : ''}>Rejected</option>
+            <option value="PENDING" ${status === 'PENDING' ? 'selected' : ''}>Pending</option>
+        </select>
+    </form>
+</div>
+
+        
+    `;
+}
+
+// Call the function initially to clear the job details section
+showJobOfferDetail(null);
+
+        
+     </script>
+</body>
+
+</html>

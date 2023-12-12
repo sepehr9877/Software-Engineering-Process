@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ccc;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #343a40;
+    }
+
+    table {
+      background-color: #fff;
+      border-radius: 4px;
+    }
+
+    table th {
+      background-color: #343a40;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    table td {
+      color: #343a40;
+    }
+
+    .badge {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .badge-primary {
+      background-color: #007bff;
+    }
+
+    .badge-success {
+      background-color: #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div th:replace="admin_nav_bar.html"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="mt-4 mb-3">Job Applications</h1>
+        <form class="filter-form" action="/admin/applications" method="get">
+          <label for="status-filter">Filter by Status:</label>
+          <select id="status-filter" class="form-control" name="status" onchange="this.form.submit()">
+            <option disabled selected>filter</option>
+            <option value="ALL">ALL</option>
+            <option value="ACCEPTED">Accepted</option>
+            <option value="INPROGRESS">InProgress</option>
+          </select>
+        </form>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Job Title</th>
+              <th>Applicant Name</th>
+              <th>Date Applied</th>
+              <th>Status</th>
+              <th>UpdateStatus</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="selected_application : ${Applications}">
+              <td th:text="${selected_application.joboffers.title}"></td>
+              <td th:text="${selected_application.user.username}" ></td>
+               <td th:text="${selected_application.dateapplied}" ></td>
+               <td>
+                <span class="badge" th:classappend="${selected_application.status == 'ACCEPTED'} ? 'badge-success' : 'badge-primary'">
+                  <span th:text="${selected_application.status}"></span>
+                </span>
+              </td>
+               <td>
+			<form th:action="@{/admin/update_applications}" method="post">
+			    <input type="hidden" name="applicationId" th:value="${selected_application.id}" />
+			    <select name="status" onchange="this.form.submit()" title="Select status">
+			        <option value="default" disabled selected>Select status</option>
+			        <option value="ACCEPTED">Accepted</option>
+			        <option value="INPROGRESS" >In Progress</option>
+			    </select>
+			</form>
+			</td> 
+    			<td>
+                <a class="btn btn-danger btn-sm" th:href="'/admin/deleteapplication/'+${selected_application.id}">Delete</a>
+              	</td>
+            </tr>
+            
+            <!-- Add more application rows -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
