@@ -1,0 +1,12 @@
+drop table skill;
+drop table education;
+drop table experience;
+drop table resume_file;
+drop table resume;
+drop table post;
+drop table role;
+drop table applications;
+drop table joboffers;
+drop table interview;
+drop table company;
+drop table user;
